@@ -8,7 +8,7 @@ class SignUpForm(UserCreationForm):
         label="",
         widget=forms.TextInput(
             attrs={
-                "class": "my-2 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "class": "mb-4 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                 "placeholder": "EmailAddress",
             }
         ),
@@ -18,7 +18,7 @@ class SignUpForm(UserCreationForm):
         max_length=50,
         widget=forms.TextInput(
             attrs={
-                "class": "my-2 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                 "placeholder": "First Name",
             }
         ),
@@ -28,7 +28,7 @@ class SignUpForm(UserCreationForm):
         max_length=50,
         widget=forms.TextInput(
             attrs={
-                "class": "my-2 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                 "placeholder": "Last Name",
             }
         ),
@@ -50,16 +50,16 @@ class SignUpForm(UserCreationForm):
 
         self.fields["username"].widget.attrs[
             "class"
-        ] = "my-2 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        ] = "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         self.fields["username"].widget.attrs["placeholder"] = "User Name"
         self.fields["username"].label = ""
         self.fields[
             "username"
-        ].help_text = '<span class=" block text-xs "><small>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</small></span>'
+        ].help_text = '<span class="block text-xs"><small>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</small></span>'
 
         self.fields["password1"].widget.attrs[
             "class"
-        ] = "my-2 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        ] = "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         self.fields["password1"].widget.attrs["placeholder"] = "Password"
         self.fields["password1"].label = ""
         self.fields[
@@ -68,9 +68,9 @@ class SignUpForm(UserCreationForm):
 
         self.fields["password2"].widget.attrs[
             "class"
-        ] = "my-2 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        ] = "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         self.fields["password2"].widget.attrs["placeholder"] = "Confirm Password"
         self.fields["password2"].label = ""
         self.fields[
             "password2"
-        ].help_text = '<span class=" text-sm block"><small>Repeat the same password, for verification.</small></span>'
+        ].help_text = '<span class="text-sm block"><small>Repeat the same password, for verification.</small></span>'
