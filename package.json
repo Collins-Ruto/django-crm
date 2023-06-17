@@ -1,0 +1,22 @@
+{
+  "name": "djangocrm",
+  "version": "1.0.0",
+  "description": "This is a CRM app developed using django and mysql database",
+  "main": "tailwind.config.js",
+   "scripts": {
+  "dev": "npx tailwindcss -i ./static/src/input.css -o ./static/src/styles.css --watch"
+ },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Collins-Ruto/django-crm.git"
+  },
+  "author": "collins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Collins-Ruto/django-crm/issues"
+  },
+  "homepage": "https://github.com/Collins-Ruto/django-crm#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
