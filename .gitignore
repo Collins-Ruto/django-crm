@@ -47,6 +47,9 @@ env/
 /media/
 !/media/.gitkeep
 
+# remove the tailwind css file
+tailwindcss-linux-x64
+
 /static/
 !/static/src/input.css
 !/static/.gitkeep
