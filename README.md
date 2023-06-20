@@ -1,5 +1,7 @@
 # Django CRM app
-This is a CRM app developed using django and mysql database
+This is a Customer Relationship Management app developed using django and mysql database
+
+![crm-page](./assets/crm.png)
 
 ## Methods
 
