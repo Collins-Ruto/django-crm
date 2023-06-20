@@ -10,22 +10,16 @@
       action=""
       class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
     >
-      {% csrf_token %}
-      {% if form.errors %}
+      {% csrf_token %} {% if form.errors %}
       <div
         class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
         role="alert"
       >
-      Your form has errors
-          {% for field in form %}
-            {% if field.errors %}
-                {{ field.errors }} <br/>
-            {% endif %}
-          {% endfor %}
+        Your form has errors {% for field in form %} {% if field.errors %} {{
+        field.errors }} <br />
+        {% endif %} {% endfor %}
       </div>
-      {% endif %}
-
-      {{ form.as_p }}
+      {% endif %} {{ form.as_p }}
 
       <button
         type="submit"

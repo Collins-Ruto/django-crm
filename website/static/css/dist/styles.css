@@ -747,6 +747,10 @@ select {
   left: 0px;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -780,6 +784,10 @@ select {
   margin-top: 1rem;
 }
 
+.ml-0 {
+  margin-left: 0px;
+}
+
 .block {
   display: block;
 }
@@ -804,6 +812,10 @@ select {
   height: 2rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .w-5 {
   width: 1.25rem;
 }
@@ -820,8 +832,22 @@ select {
   width: 100%;
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .max-w-screen-xl {
   max-width: 1280px;
+}
+
+.grow {
+  flex-grow: 1;
 }
 
 .table-auto {
@@ -838,6 +864,10 @@ select {
           appearance: none;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -846,8 +876,20 @@ select {
   flex-wrap: wrap;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -878,8 +920,22 @@ select {
   border-width: 1px;
 }
 
+.border-y {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.border-x {
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+
 .border-b {
   border-bottom-width: 1px;
+}
+
+.border-l {
+  border-left-width: 1px;
 }
 
 .border-gray-100 {
@@ -915,6 +971,11 @@ select {
 .border-red-500 {
   --tw-border-opacity: 1;
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
 }
 
 .bg-blue-700 {
@@ -972,12 +1033,35 @@ select {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
+.bg-orange-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+}
+
+.bg-orange-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
+}
+
+.bg-orange-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-2\.5 {
+  padding: 0.625rem;
 }
 
 .px-2 {
