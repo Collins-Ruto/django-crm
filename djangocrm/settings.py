@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,14 +37,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "django_browser_reload",
     'djangocrm',
     'website',
+    'tailwind',
 ]
+
+TAILWIND_APP_NAME = "website"
+TAILWIND_DEV_MODE = DEBUG
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -136,6 +141,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # TAILWINDCSS_CONFIG_FILE = BASE_DIR / 'tailwind.config.js'
 
 # TAILWINDCSS_OUTPUT_FILE = 'style.css'
+
+TAILWIND_APP_NAME = 'website'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static/"] 
