@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'djangocrm'
+    'djangocrm',
+    'website',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # 'DIRS': [],
-        'DIRS': ["website/templates"],
+        'DIRS': [BASE_DIR, "website/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,4 +132,10 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-APPS_DIR = True
+# TAILWINDCSS_CLI_FILE = BASE_DIR / 'tailwindcss-linux-x64'
+# TAILWINDCSS_CONFIG_FILE = BASE_DIR / 'tailwind.config.js'
+
+# TAILWINDCSS_OUTPUT_FILE = 'style.css'
+
+STATIC_URL = "static/"
+STATICFILES_DIRS = [BASE_DIR / "static/"] 
