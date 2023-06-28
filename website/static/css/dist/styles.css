@@ -752,6 +752,11 @@ select {
   margin-right: auto;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -806,6 +811,38 @@ select {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[10rem\] {
+  width: 10rem;
+}
+
+.w-\[20rem\] {
+  width: 20rem;
+}
+
+.w-\[30rem\] {
+  width: 30rem;
+}
+
+.w-\[24rem\] {
+  width: 24rem;
+}
+
+.w-\[25rem\] {
+  width: 25rem;
+}
+
+.w-\[35rem\] {
+  width: 35rem;
+}
+
+.w-\[32rem\] {
+  width: 32rem;
+}
+
+.w-\[22rem\] {
+  width: 22rem;
 }
 
 .max-w-screen-xl {
