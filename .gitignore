@@ -50,7 +50,9 @@ env/
 # remove the tailwind css file
 tailwindcss-linux-x64
 
+# Static files
 /static/
+./website/static/
 !/static/src/input.css
 !/static/.gitkeep
 
