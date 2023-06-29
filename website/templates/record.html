@@ -17,10 +17,12 @@
           <span class="font-semibold text-lg">Phone: </span> {{ record.phone }}
         </div>
         <div>
-          <span class="font-semibold text-lg">Address: </span> {{ record.address }}
+          <span class="font-semibold text-lg">Address: </span> {{ record.address
+          }}
         </div>
         <div>
-          <span class="font-semibold text-lg">Zipcode: </span> {{ record.zipcode }}
+          <span class="font-semibold text-lg">Zipcode: </span> {{ record.zipcode
+          }}
         </div>
         <div>
           <span class="font-semibold text-lg">City: </span> {{ record.city }}
@@ -29,35 +31,37 @@
           <span class="font-semibold text-lg">State: </span> {{ record.state }}
         </div>
         <div>
-          <span class="font-semibold text-lg">Country: </span> {{ record.country }}
+          <span class="font-semibold text-lg">Country: </span> {{ record.country
+          }}
         </div>
         <div>
-          <span class="font-semibold text-lg">Created At: </span> {{ record.created_at }}
+          <span class="font-semibold text-lg">Created At: </span> {{
+          record.created_at }}
         </div>
       </div>
     </div>
     <a
-        href="{% url 'home'%}"
-        type="submit"
-        class="text-white mt-4 font-bold border-gray-200 border rounded bg-gray-900 hover:bg-gray-800 py-2 px-4 focus:outline-none focus:shadow-outline"
-      >
-        Back
+      href="{% url 'home'%}"
+      type="submit"
+      class="text-white mt-4 font-bold border-gray-200 border rounded bg-gray-900 hover:bg-gray-800 py-2 px-4 focus:outline-none focus:shadow-outline"
+    >
+      Back
     </a>
     <a
-        href="{% url 'delete_record' record.id %}"
-        type="submit"
-        class="text-white mt-4 font-bold border-gray-200 border rounded bg-red-600 hover:bg-red-500 py-2 px-4 focus:outline-none focus:shadow-outline"
-      >
-        Delete
+      href="{% url 'update_record' record.id %}"
+      type="submit"
+      class="text-white mt-4 font-bold border-gray-200 border rounded bg-green-600 hover:bg-green-500 py-2 px-4 focus:outline-none focus:shadow-outline"
+    >
+      Update
     </a>
-
     <a
-        href="{% url 'update_record' record.id %}"
-        type="submit"
-        class="text-white mt-4 font-bold border-gray-200 border rounded bg-green-600 hover:bg-green-500 py-2 px-4 focus:outline-none focus:shadow-outline"
-      >
-        Update Record
+      href="{% url 'delete_record' record.id %}"
+      type="submit"
+      class="text-white mt-4 font-bold border-gray-200 border rounded bg-red-600 hover:bg-red-500 py-2 px-4 focus:outline-none focus:shadow-outline"
+    >
+      Delete
     </a>
   </div>
 
   {% endblock %}
+</div>
