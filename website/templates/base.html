@@ -1,31 +1,30 @@
-
 {% load static tailwind_tags %}
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Django CRM</title>
 
-    <link rel="stylesheet" href="{% static 'src/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'src/styles.css' %}" />
 
     {% tailwind_css %}
-</head>
-<body>
+  </head>
+  <body>
     {% include 'navbar.html' %}
     <div class="container mx-auto p-4">
-        {% if messages %}
-            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-                <ul>
-                    {% for message in messages %}
-                    <li>sorry, {{ message }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        {% endif %}
-
-        {% block content %}
-        {% endblock %}
+      {% if messages %}
+      <div
+        class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+        role="alert"
+      >
+        <ul>
+          {% for message in messages %}
+          <li>Hello, {{ message }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %} {% block content %} {% endblock %}
     </div>
-</body>
+  </body>
 </html>
