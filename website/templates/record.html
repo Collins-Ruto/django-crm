@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="w-full flex">
+  <div class="w-[30rem] mx-auto">
+    <div class="text-center">
+      <h1 class="text-red-600 font-bold text-4xl mx-auto">Customer</h1>
+    </div>
+    <div class="flex flex-col mt-4 rounded border">
+      <span class="font-semibold px-2 bg-slate-200 w-full text-lg"
+        >{{ record.first_name }} {{ record.last_name }}
+      </span>
+      <div class="flex flex-col p-2 gap-2">
+        <div>
+          <span class="font-semibold text-lg">Email: </span> {{ record.email }}
+        </div>
+        <div>
+          <span class="font-semibold text-lg">Phone: </span> {{ record.phone }}
+        </div>
+        <div>
+          <span class="font-semibold text-lg">Address: </span> {{ record.address }}
+        </div>
+        <div>
+          <span class="font-semibold text-lg">Zipcode: </span> {{ record.zipcode }}
+        </div>
+        <div>
+          <span class="font-semibold text-lg">City: </span> {{ record.city }}
+        </div>
+        <div>
+          <span class="font-semibold text-lg">State: </span> {{ record.state }}
+        </div>
+        <div>
+          <span class="font-semibold text-lg">Country: </span> {{ record.country }}
+        </div>
+        <div>
+          <span class="font-semibold text-lg">Created At: </span> {{ record.created_at }}
+        </div>
+      </div>
+    </div>
+    <a
+        href="{% url 'home'%}"
+        type="submit"
+        class="text-white mt-4 font-bold border-gray-200 border rounded bg-gray-900 hover:bg-gray-800 py-2 px-4 focus:outline-none focus:shadow-outline"
+      >
+        Back
+    </a>
+    <a
+        href="{% url 'delete_record' record.id %}"
+        type="submit"
+        class="text-white mt-4 font-bold border-gray-200 border rounded bg-red-600 hover:bg-red-500 py-2 px-4 focus:outline-none focus:shadow-outline"
+      >
+        Delete
+    </a>
+  </div>
+
+  {% endblock %}
