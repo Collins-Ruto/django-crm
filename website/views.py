@@ -2,7 +2,7 @@ import logging
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from .forms import SignUpForm
+from .forms import AddRecordForm, SignUpForm
 from .models import Record
 
 logger = logging.getLogger(__name__)
@@ -77,4 +77,17 @@ def delete_record(request, p_k):
     return redirect('home')
 
 def add_record(request):
-    return render(request, 'add_record.html', {})
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = AddRecordForm(request.POST)
+            if form.is_valid():
+                form.save()
+                messages.success(request, "Form Submitted succesfully ...")
+                return redirect('home')
+        else:
+            form = AddRecordForm()
+            return render(request, 'add_record.html', {'form': form})
+
+        return render(request, 'add_record.html', {'form': form})
+    messages.success(request, "You need to be logged in ..")
+    return redirect('home')
