@@ -50,6 +50,14 @@
       >
         Delete
     </a>
+
+    <a
+        href="{% url 'update_record' record.id %}"
+        type="submit"
+        class="text-white mt-4 font-bold border-gray-200 border rounded bg-green-600 hover:bg-green-500 py-2 px-4 focus:outline-none focus:shadow-outline"
+      >
+        Update Record
+    </a>
   </div>
 
   {% endblock %}

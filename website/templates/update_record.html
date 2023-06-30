@@ -3,17 +3,17 @@
 <div class="w-full flex">
   <div class="w-[20rem] mx-auto">
     <div class="text-center">
-      <h1 class="text-red-600 font-bold text-4xl mx-auto">Add Record</h1>
+      <h1 class="text-red-600 font-bold text-4xl mx-auto">Register</h1>
     </div>
     <form
       method="POST"
-      action="{% url 'add_record' %}"
+      action=""
       class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
     >
       {% csrf_token %}
       {% if form.errors %}
       <div
-        class="bg-red-100 border border-red-400 text-red-700  px-4 py-3 rounded relative"
+        class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
         role="alert"
       >
       Your form has errors
@@ -31,7 +31,7 @@
         type="submit"
         class="text-white font-bold border-gray-200 border rounded dark:bg-gray-900 py-2 px-4 focus:outline-none focus:shadow-outline"
       >
-        Add Record
+        Register
       </button>
     </form>
   </div>
