@@ -33,7 +33,7 @@ class SignUpForm(UserCreationForm):
                 "placeholder": "Last Name",
             }
         ),
-    )
+    ) 
 
     class Meta:
         model = User
@@ -47,7 +47,7 @@ class SignUpForm(UserCreationForm):
         )
 
     def __init__(self, *args, **kwargs):
-        super(SignUpForm, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
         self.fields["username"].widget.attrs[
             "class"
@@ -82,7 +82,7 @@ class AddRecordForm(forms.ModelForm):
         required=True,
         widget=forms.widgets.TextInput(
             attrs={
-                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "class": "mb-2 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                 "placeholder": "First Name",
             }
         ),
@@ -92,7 +92,7 @@ class AddRecordForm(forms.ModelForm):
         required=True,
         widget=forms.widgets.TextInput(
             attrs={
-                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "class": "mb-2 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                 "placeholder": "Last Name",
             }
         ),
@@ -102,7 +102,7 @@ class AddRecordForm(forms.ModelForm):
         required=True,
         widget=forms.widgets.TextInput(
             attrs={
-                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "class": "mb-2 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                 "placeholder": "Email Address",
             }
         ),
@@ -112,7 +112,7 @@ class AddRecordForm(forms.ModelForm):
         required=True,
         widget=forms.widgets.TextInput(
             attrs={
-                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "class": "mb-2 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                 "placeholder": "Phone",
             }
         ),
@@ -122,7 +122,7 @@ class AddRecordForm(forms.ModelForm):
         required=True,
         widget=forms.widgets.TextInput(
             attrs={
-                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "class": "mb-2 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                 "placeholder": "Address",
             }
         ),
@@ -132,7 +132,7 @@ class AddRecordForm(forms.ModelForm):
         required=True,
         widget=forms.widgets.TextInput(
             attrs={
-                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "class": "mb-2 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                 "placeholder": "City",
             }
         ),
@@ -142,7 +142,7 @@ class AddRecordForm(forms.ModelForm):
         required=True,
         widget=forms.widgets.TextInput(
             attrs={
-                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "class": "mb-2 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                 "placeholder": "State",
             }
         ),
@@ -152,7 +152,7 @@ class AddRecordForm(forms.ModelForm):
         required=True,
         widget=forms.widgets.TextInput(
             attrs={
-                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "class": "mb-2 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                 "placeholder": "ZipCode",
             }
         ),
@@ -162,13 +162,12 @@ class AddRecordForm(forms.ModelForm):
         required=True,
         widget=forms.widgets.TextInput(
             attrs={
-                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "class": "mb-2 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                 "placeholder": "Country",
             }
         ),
     )
 
     class Meta:
-                model = Record
-                exclude = ("user",)
-                
+        model = Record
+        exclude = ("user",)
