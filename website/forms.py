@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from .models import Record
 
 
 class SignUpForm(UserCreationForm):
@@ -15,8 +16,8 @@ class SignUpForm(UserCreationForm):
     )
     first_name = forms.CharField(
         label="",
-        max_length=50,
-        widget=forms.TextInput(
+        required=True,
+        widget=forms.widgets.TextInput(
             attrs={
                 "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                 "placeholder": "First Name",
@@ -25,8 +26,8 @@ class SignUpForm(UserCreationForm):
     )
     last_name = forms.CharField(
         label="",
-        max_length=50,
-        widget=forms.TextInput(
+        required=True,
+        widget=forms.widgets.TextInput(
             attrs={
                 "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
                 "placeholder": "Last Name",
@@ -74,3 +75,100 @@ class SignUpForm(UserCreationForm):
         self.fields[
             "password2"
         ].help_text = '<span class="text-sm block"><small>Repeat the same password, for verification.</small></span>'
+
+class AddRecordForm(forms.ModelForm):
+    first_name = forms.CharField(
+        label="",
+        required=True,
+        widget=forms.widgets.TextInput(
+            attrs={
+                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "placeholder": "First Name",
+            }
+        ),
+    )
+    last_name = forms.CharField(
+        label="",
+        required=True,
+        widget=forms.widgets.TextInput(
+            attrs={
+                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "placeholder": "Last Name",
+            }
+        ),
+    )
+    email = forms.CharField(
+        label="",
+        required=True,
+        widget=forms.widgets.TextInput(
+            attrs={
+                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "placeholder": "Email Address",
+            }
+        ),
+    )
+    phone = forms.CharField(
+        label="",
+        required=True,
+        widget=forms.widgets.TextInput(
+            attrs={
+                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "placeholder": "Phone",
+            }
+        ),
+    )
+    address = forms.CharField(
+        label="",
+        required=True,
+        widget=forms.widgets.TextInput(
+            attrs={
+                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "placeholder": "Address",
+            }
+        ),
+    )
+    city = forms.CharField(
+        label="",
+        required=True,
+        widget=forms.widgets.TextInput(
+            attrs={
+                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "placeholder": "City",
+            }
+        ),
+    )
+    state = forms.CharField(
+        label="",
+        required=True,
+        widget=forms.widgets.TextInput(
+            attrs={
+                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "placeholder": "State",
+            }
+        ),
+    )
+    zipcode = forms.CharField(
+        label="",
+        required=True,
+        widget=forms.widgets.TextInput(
+            attrs={
+                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "placeholder": "ZipCode",
+            }
+        ),
+    )
+    country = forms.CharField(
+        label="",
+        required=True,
+        widget=forms.widgets.TextInput(
+            attrs={
+                "class": "mb-4 shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                "placeholder": "Country",
+            }
+        ),
+    )
+
+    class Meta:
+                model = Record
+                exclude = ("user",)
+                
